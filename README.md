@@ -5,12 +5,14 @@
 
 
 
+This project provides an IPL (Indian Premier League) match analysis tool using Flask. It predicts the total score of an IPL match based on various input parameters such as teams, overs, runs, and recent performance statistics.
+
+
 
 <img width="1438" alt="Screenshot 2024-07-06 at 7 09 37 PM" src="https://github.com/itzayush21/IPL_SCORE_WEBSITE/assets/123325069/7eea105c-a09b-4825-95aa-e083ad9cad1d">
 
 
 
-This project provides an IPL (Indian Premier League) match analysis tool using Flask. It predicts the total score of an IPL match based on various input parameters such as teams, overs, runs, and recent performance statistics.
 
 
 
