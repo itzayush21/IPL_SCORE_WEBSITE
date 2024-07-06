@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <style>
+
+      
+        body {
+            background: linear-gradient(-45deg,#30cfd0, #330867);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+        
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color:black;
+        }
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        header {
+            background-image:linear-gradient(90deg,rgba(92,92,224,1) 35%, rgba(0,212,255,1) 100%);
+            color: white;
+            padding: 10px 0;
+            border-radius:5px;
+            text-align: center;
+            
+        }
+        .choice
+        {
+            display:flex;
+            justify-content: center;
+            grad
+        }
+        .select
+        {
+            background-color: #123C69;
+            border:1px solid black;
+            opacity:.5;
+            fond: bold;
+            margin:10px;
+            padding: 5px 0px 0px 2px;
+            border-radius:5px;
+            height:25px;
+            width:100%;
+            text-align:center;
+            transition: background 0.3s, opacity 0.3s, color 0.3s, font-weight 0.3s;
+        }
+        .option
+        {
+            color: white;
+            margin: 10px;
+            padding:5px 0px;
+            text-decoration: none;
+        }
+        .select:hover {
+           
+            opacity: 1;
+            background:linear-gradient(90deg, rgba(140,241,239,1) 14%, rgba(60,222,222,1) 61%, rgba(0,158,161,1) 100%, rgba(9,230,245,1) 100%, rgba(99,130,227,1) 100%);
+
+            font-weight: bold;
+            
+        }
+        .select:hover .option{
+            color: black;
+        }
+        .main{
+            margin-bottom:10px;
+            border-radius:5px;
+            border:2px solid white;
+            opacity:.8;
+            color:white;
+            background:black;
+            height:55vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .team{
+            margin:100px;
+            border-radius:5px;
+            height:45vh;
+            width:100%;
+            background:aqua;
+            border-color: 5px black;
+            box-shadow:  10px 10px white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+        }
+        #team1
+        {
+            background: #d5eeff;
+            margin:5px 5px 5px 5px;
+            border-radius:5px;
+            height:50px;
+            width: 60%;
+            border-color:black;
+        }
+        #team2
+        {
+            background: #d5eeff;
+            margin:5px 5px 5px 5px;
+            border-radius:5px;
+            height:50px;
+            width: 60%;
+            border-color:black;
+        }
+        .image img{
+            height:220px;
+            width:360px;
+            border-radius:2px;
+            object-fit: cover;
+            border-radius: 5px;
+            
+            margin-top: 30px;
+        }
+        .main p{
+            font: bold;
+            size:40px;
+        }
+        .form-container {
+            display: flex;
+            flex-direction:row;
+            align-items: center;
+            margin-right: 20px;
+            border-block-color:aqua;
+        }
+
+        form {
+           
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin:10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            animation: blink 2s infinite;
+            background-color:#005792;
+            color: white;font: bold sans-serif;
+            }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                    opacity: .5;
+            }
+        }
+        .pred{
+            margin:10px;
+            padding: 5px;
+            background-color:aqua;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+        }
+        section {
+            background:linear-gradient(90deg, rgba(140,241,178,1) 21%, rgba(60,222,222,1) 100%, rgba(0,158,161,1) 100%, rgba(9,182,245,1) 100%, rgba(99,130,227,1) 100%);
+            background-color:;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow:  10px 10px black;
+            
+        }
+        
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>WELCOME TO IPL MATCH ANALYSIS</h1>
+</header>
+
+<div class="choice" id="choic1">
+    <div class="select" id="select1">
+        <a class="option" id="option1" href="#">FINAL SCORE</a>
+    </div>
+    <div class="select" id="select2">
+        <a class="option" id="option2" href="#">IPL VISUALIZATION</a>
+    </div>
+</div>
+<div class="main" id="main">
+    <div class="team">
+        <form method="POST" action="/">
+            <select id="team1" name="team1" onchange="updateTeam('team1')">
+                <option value="" data-img="static/images/new.jpeg">Batting Team</option>
+                <option value="Chennai Super Kings" data-img="static/images/csk.png">Chennai Super Kings</option>
+                <option value="Delhi Daredevils" data-img="static/images/delhi.png">Delhi Daredevils</option>
+                <option value="Kolkata Knight Riders" data-img="static/images/kkr.jpg">Kolkata Knight Riders</option>
+                <option value="Mumbai Indians" data-img="static/images/mi.png">Mumbai Indians</option>
+                <option value="Rajasthan Royals" data-img="static/images/rr.png">Rajasthan Royals</option>
+                <option value="Kings XI Punjab" data-img="static/images/punjab kings.jpeg">Kings XI Punjab</option>
+                <option value="Royal Challengers Bangalore" data-img="static/images/rcb.png">Royal Challengers Bangalore</option>
+                <option value="Sunrisers Hyderabad" data-img="static/images/srh.png">Sunrisers Hyderabad</option>
+            </select>
+            
+            <button type="button" onclick="saveTeam1()">SUBMIT</button>
+        </form>
+    <div class="image">
+         <img id="team1Img" src="static/images/new.png" alt="Team 1 Image" >
+    </div>
+    </div>
+    <p>VS</p>
+    <div class="team">
+        <form method="post" action="/">
+            <select id="team2" name="team2" method="post" onchange="updateTeam('team2')">
+                <option value="" data-img="static/images/new.jpeg">Bowling Team</option>
+                <option value="Chennai Super Kings" data-img="static/images/csk.png">Chennai Super King</option>
+                <option value="Delhi Daredevils" data-img="static/images/delhi.png" >Delhi Daredevils</option>
+                <option value="Kolkata Knight Riders" data-img="static/images/kkr.jpg" >Kolkata Knight Riders</option>
+                <option value="Kings XI Punjab" data-img="static/images/punjab kings.jpeg" >Kings XI Punjab</option>
+                <option value="Mumbai Indians" data-img="static/images/mi.png" >Mumbai Indians</option>
+                <option value="Rajasthan Royals" data-img="static/images/rr.png" >Rajasthan Royals</option>
+
+                <option value="Royal Challengers Bangalore" data-img="static/images/rcb.png" >Royal Challengers Bangalore</option>
+                <option value="Sunrisers Hyderabad" data-img="static/images/srh.png" >Sunrisers Hyderabad</option>
+            </select>
+            
+            <button type="button" onclick="saveTeam2()">SUBMIT</button>
+        </form>
+            
+        <div class="image">
+            <img id="team2Img" src="static/images/new.png" alt="Team 2 Image" >
+        </div>
+    </div>
+    <div class="form-container">
+        <form id="scoreForm" method="POST" action="/"> 
+            <input type="hidden" id="team1Hidden" name="team1Hidden" value="">
+            <input type="hidden" id="team2Hidden" name="team2Hidden" value="">
+            <div class="form-field">
+                <label for="overs">Overs</label>
+                <input type="number" id="overs" name="overs">
+            </div>
+            <div class="form-field">
+                <label for="runs">Runs</label>
+                <input type="number" id="runs" name="runs">
+            </div>
+            <div class="form-field">
+                <label for="run_last_5">Runs Last 5</label>
+                <input type="number" id="run_last_5" name="run_last_5">
+            </div>
+            <div class="form-field">
+                <label for="wicket_last_5">Wickets Last 5</label>
+                <input type="number" id="wicket_last_5" name="wicket_last_5">
+            </div>
+            <button type="submit">Calculate Total Score</button>
+        </form>
+    </div>
+    
+</div>
+{% if s is not none %}
+<div class="pred">
+    <p><h3>TOTAL SCORE:{{s}}</h3></p>
+</div>
+{% endif %}
+
+
+<section>
+    <h2>About Us</h2>
+    <p>This is a brief introduction about our website. Here we provide various services to our customers.</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 My Web Page. All rights reserved.</p>
+</footer>
+
+</body>
+<script>
+    function updateTeam(team) {
+        var selectElement = document.getElementById(team);
+        var imgElement = document.getElementById(team + 'Img');
+        var selectedOption = selectElement.options[selectElement.selectedIndex];
+        var imgSrc = selectedOption.getAttribute('data-img');
+        imgElement.src = imgSrc ? imgSrc : 'static/images/chhattisgarh.jpeg';
+        
+
+    }
+    function saveTeam1() {
+        const teamSelect = document.getElementById('team1');
+        const teamHidden = document.getElementById('team1Hidden');
+        const selectedOption = teamSelect.options[teamSelect.selectedIndex];
+
+        teamHidden.value = selectedOption.value;
+    }
+    function saveTeam2() {
+        const teamSelect = document.getElementById('team2');
+        const teamHidden = document.getElementById('team2Hidden');
+        const selectedOption = teamSelect.options[teamSelect.selectedIndex];
+
+        teamHidden.value = selectedOption.value;
+    }
+    
+    
+
+</script>
+</html>
