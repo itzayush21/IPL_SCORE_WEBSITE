@@ -9,7 +9,7 @@ This project provides an IPL (Indian Premier League) match analysis tool using F
 
 
 
-<img width="1438" alt="Screenshot 2024-07-06 at 7 09 37 PM" src="https://github.com/itzayush21/IPL_SCORE_WEBSITE/assets/123325069/7eea105c-a09b-4825-95aa-e083ad9cad1d">
+<img width="1438" alt="Screenshot 2024-07-08 at 3 02 47 PM" src="https://github.com/itzayush21/IPL_SCORE_WEBSITE/assets/123325069/f131766c-0b2a-455c-b9c8-4dfbc783f833">
 
 
 
